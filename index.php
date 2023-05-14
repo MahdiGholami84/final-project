@@ -5,7 +5,6 @@
     <title>school</title>
     <link href="css/style.css" rel="stylesheet"/>
 </head>
-
 <body>
 <?php
 include "connection.php";
@@ -47,14 +46,12 @@ if (isset($_POST['submit2'])) {
                     <td>delete</td>
                     <td>edit</td>
                 </tr>
-
                 <?php
                 include "connection.php";
                 $query = "SELECT * FROM class";
                 $result = $db->prepare($query);
                 $result->execute();
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-
                     echo "
     <tr>
     <td>" . $row['class_id'] . "</td>
@@ -65,10 +62,8 @@ if (isset($_POST['submit2'])) {
     ";
                 }
                 ?>
-
             </table>
         </div>
-
         <div id="row1_col2">
             <form action="" method="post">
                 <fieldset>
@@ -85,7 +80,6 @@ if (isset($_POST['submit2'])) {
                     <input type="text" name="stud_ave"/><br/>
                     <input type="submit" name="submit2" value="inser-student"/>
                 </fieldset>
-
             </form>
             <table border="1">
                 <tr>
@@ -97,8 +91,6 @@ if (isset($_POST['submit2'])) {
                     <td>delete</td>
                     <td>edit</td>
                 </tr>
-
-
                 <?php
                 include "connection.php";
                 $query = "SELECT * FROM student";
@@ -119,7 +111,6 @@ if (isset($_POST['submit2'])) {
     ";
                 }
                 ?>
-
             </table>
         </div>
     </div>
